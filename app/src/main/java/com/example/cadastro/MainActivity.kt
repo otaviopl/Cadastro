@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         val btnSalvar = findViewById<Button>(R.id.btnSalvar)
         val btnLimpar = findViewById<Button>(R.id.btnLimpar)
 
-        // Configurar Spinner (Estados)
         val estados = arrayOf("Acre", "Alagoas", "Amazonas", "Bahia", "Ceará", "Distrito Federal")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, estados)
         spinnerUF.adapter = adapter
@@ -42,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             val cidade = editCidade.text.toString()
             val uf = spinnerUF.selectedItem.toString()
 
-            // Pegando o valor selecionado no RadioGroup
             val sexoSelecionadoId = radioGroupSexo.checkedRadioButtonId
             val sexo = if (sexoSelecionadoId != -1) {
                 findViewById<RadioButton>(sexoSelecionadoId).text.toString()
